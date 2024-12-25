@@ -1,0 +1,124 @@
+.about-us {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+}
+
+.about-us__left,
+.about-us__right {
+	width: 100%;
+}
+
+.about-us__left {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-5);
+	padding: var(--space-10) 1rem;
+}
+
+.about-us__description {
+	color: var(--color-dark-slate-gray);
+	font-size: calc(var(--font-size-base) * 1.5);
+	line-height: calc(var(--font-size-base) * 2.5);
+}
+
+.about-us__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-5);
+}
+
+.about-us__grid-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-white);
+	padding: var(--space-2);
+	gap: var(--space-1);
+	background-color: var(--color-dark-slate-gray);
+	border-radius: 0 40px;
+}
+
+.about-us__grid-item-title {
+	font-size: calc(var(--font-size-base) * 2.5);
+}
+
+.about-us__grid-item-description {
+	font-size: calc(var(--font-size-base) * 1.25);
+}
+
+.about-us__button {
+	padding: var(--space-2) calc(var(--space-6));
+	background-color: var(--color-orange);
+	color: var(--color-white);
+	font-size: calc(var(--font-size-base) * 1.5);
+	box-shadow: 0 4px 12px 0 var(--color-light-orange);
+}
+
+.about-us__button svg.about-us__icon {
+	width: 40px;
+	height: 40px;
+}
+
+.about-us__right {
+	background-color: var(--color-dark-slate-gray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.about-us__right img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media screen and (min-width:412px) {
+	.about-us__grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 640px) {}
+
+@media screen and (min-width: 768px) {
+	.about-us__left {
+		padding: var(--space-10);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.about-us {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.about-us__left,
+	.about-us__right {
+		width: 50%;
+	}
+
+	.about-us__right {
+		padding: 0 40px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.about-us {
+		height: 100dvh;
+	}
+
+	.about-us__left {
+		padding: calc(var(--space-10) * 3) calc(var(--space-10));
+
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.about-us__left {
+		padding: calc(var(--space-10) * 4) calc(var(--space-10) * 4.5);
+	}
+}

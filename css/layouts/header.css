@@ -1,0 +1,163 @@
+/* Global resets */
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Header */
+.header {
+    position: absolute;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	height: 110px;
+	background-color: var(--color-light-white);
+	color: var(--color-dark-slate-gray);
+	box-shadow: 0 4px 8px 0 var(--color-light-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.header__container {
+    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 var(--space-5);
+}
+
+.header__logo img{
+  max-width: 58px;
+  height: auto;
+}
+  
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: var(--space-6);
+}
+
+.header__nav-list li {
+  display: block;
+}
+
+.header__nav-list li a {
+  text-decoration: none;
+  color: var(--color-dark-slate-gray);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__language {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__language-iconGlobal {
+  position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+}
+
+.header__language-select {
+  padding-left: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.header__language-iconDown em {
+  font-size: smaller;
+}
+
+.header__language select {
+  color: var(--color-dark-slate-gray);
+}
+
+.header__menu-toggle {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index: 1;
+}
+
+.header__menu-toggle-icon {
+	position: relative;
+	width: 25px;
+	height: 3px;
+}
+
+.header__nav-menu-toggle {
+  display: none;
+}
+
+ /* Responsive Header */
+ @media screen and (max-width: 1024px) {
+    .header__menu-toggle {
+		display: flex;
+	}
+
+  .header__nav-menu-toggle {
+    position: absolute;
+    top: 15%;
+    right: 4%;
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 11px;
+  }
+
+    .header__nav {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-white);
+		transition: left 0.3s ease;
+		overflow-y: auto;
+		z-index: 1000;
+	}
+
+  .header__nav.is-open {
+		left: 0;
+	}
+
+    .header__nav-list {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		gap: var(--space-10);
+	}
+ }

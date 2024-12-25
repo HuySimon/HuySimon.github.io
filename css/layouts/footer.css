@@ -1,0 +1,206 @@
+.footer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	gap: var(--space-4);
+	background-color: var(--color-white);
+	padding: calc(var(--space-10)) 0 var(--space-4) 0;
+}
+
+.footer__container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--space-4));
+}
+
+.footer__logo-description {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4);
+	justify-content: start;
+}
+
+.footer__logo-description .footer__logo {
+	width: 80px;
+	height: 100px;
+	aspect-ratio: 2/3;
+	object-fit: contain;
+}
+
+.footer__logo-description .footer__description {
+	line-height: 1.5;
+	font-size: calc(var(--font-size-base)) * 1.5;
+}
+
+.footer__subscription {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2);
+}
+
+.footer__subscription .footer__subscription-form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--space-4);
+	padding-bottom: var(--space-4);
+	border-bottom: 1px solid var(--color-dark-slate-gray);
+}
+
+.footer__logo-description .footer__subscription .footer__subscription-label {
+	font-size: calc(var(--font-size-base)) * 1.5;
+	font-weight: 700;
+}
+
+.footer__subscription-form .footer__subscription-icon {
+	width: 30px;
+	height: 30px;
+	display: none;
+}
+
+.footer__subscription-form .footer__subscription-input {
+	width: 100%;
+	height: 100%;
+	min-height: 36px;
+	padding: 0 var(--space-2);
+	border: none;
+}
+
+.footer__subscription-form .footer__subscription-input:focus-visible {
+	outline: none;
+}
+
+.footer__subscription-form .footer__subscription-button {
+	width: 100%;
+	color: var(--color-white);
+	font-weight: 700;
+	padding: var(--space-1) var(--space-3);
+	gap: var(--space-1);
+	background-color: var(--color-orange);
+}
+
+.footer__subscription-form .footer__subscription-button svg {
+	width: 26px;
+	height: 26px;
+}
+
+.footer .footer__nav {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-4);
+}
+
+.footer__nav .footer__nav-column {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4);
+}
+
+.footer__nav .footer__nav-column .footer__nav-title {
+	font-size: calc(var(--font-size-base) * 1.75);
+	font-weight: 700;
+}
+
+.footer__nav .footer__nav-column .footer__nav-list {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-2);
+}
+
+.footer__nav .footer__nav-column .footer__nav-list .footer__nav-item,
+.footer__nav .footer__nav-column .footer__nav-list .footer__nav-link {
+	list-style: none;
+	color: var(--color-dark-slate-gray);
+	font-size: 400;
+	text-wrap: balance;
+}
+
+.footer__nav-contact {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.footer__nav-contact svg {
+	width: 24px;
+	height: 24px;
+}
+
+.footer__nav-contact .footer__nav-phone {
+	display: flex;
+	gap: var(--space-1);
+	flex-direction: column;
+}
+
+.footer__nav-phone a.footer__nav-link,
+.footer__nav-email a.footer__nav-link {
+	color: var(--color-dark-slate-gray);
+	font-weight: 700;
+}
+
+.footer .footer__bottom {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+.footer .footer__bottom .footer__social {
+	display: flex;
+	gap: var(--space-2);
+}
+
+.footer__bottom .footer__social .footer__social-link a svg {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+/* Responsive */
+@media screen and (min-width: 412px) {
+	.footer .footer__nav {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.footer__subscription .footer__subscription-form {
+		flex-direction: row;
+		gap: var(--space-1);
+	}
+	.footer__subscription-form .footer__subscription-button{
+		width: 50%;
+	}
+	.footer__subscription-form .footer__subscription-icon{
+		display: block;
+	}
+	.footer__subscription .footer__subscription-form{
+		padding-bottom: var(--space-2);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer .footer__nav {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.footer__container {
+		flex-direction: row;
+		gap: calc(var(--space-10) * 3);
+	}
+	.footer {
+		padding: calc(var(--space-10) * 2) 0;
+	}
+}
